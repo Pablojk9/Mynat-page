@@ -17,6 +17,7 @@ const Landing = () => {
           <img className="landingimg" src="/SN.png" alt="Hero" />
           <h1>CONSULTA POR TU COTIZACIÓN DE MANERA GRATUITA</h1>
           
+          
         </div>
       </div>
       <div className="product-section">
