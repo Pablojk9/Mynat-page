@@ -4,6 +4,7 @@ import './App.css';
 import Catalogo from './Catalogo/Catalogo.js';
 import Barra from './Barra/Barra.js';
 import SobreNosotros from './Sobre_nosotros/SobreNosotros.js';
+import Landing from './Landing/Landing.js';
 
 function App() {
   return (
