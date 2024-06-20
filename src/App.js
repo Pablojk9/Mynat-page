@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Catalogo from './Catalogo/Catalogo.js';
 import Barra from './Barra/Barra.js';
@@ -15,7 +15,8 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-          {/* Puedes agregar más rutas aquí si es necesario */}
+          {/* Redirección predeterminada a la página de aterrizaje */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </div>
