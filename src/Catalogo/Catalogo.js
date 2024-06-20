@@ -11,7 +11,7 @@ const products = {
     "/4.jpeg"
   ],
   "Bombas": [
-    "/5.jpg",
+    "/5.JPG",
     "/6.jpeg"
   ],
   "Calderas Industriales": [
