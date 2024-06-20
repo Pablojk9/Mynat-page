@@ -15,7 +15,7 @@ const products = {
     "/6.jpeg"
   ],
   "Calderas Industriales": [
-    "/7.jpeg",
+    "%PUBLIC_URL%/7.jpeg",
     "/8.jpeg"
   ],
   "Calderas de Edificios": [
