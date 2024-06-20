@@ -1,5 +1,4 @@
 .bar {
-
     background-color: white;
     padding: 10px 20px;
     display: flex;
@@ -11,7 +10,6 @@
     left: 0;
     z-index: 1000;
     height: 60px;
-    /* box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra exterior ligera */
 }
 
@@ -22,9 +20,8 @@
     margin-right: auto; /* Asegura que todo el espacio extra se mueva hacia la derecha */
 }
 
-.logo:hover{
+.logo:hover {
     cursor: pointer;
-
 }
 
 .button-container {
@@ -48,4 +45,13 @@
 .bar-link:hover {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     /* background-color: salmon; */
+}
+
+.usuario-link {
+    color: white; /* Cambia el color a rojo */
+    background-color: red;
+}
+
+.usuario-link:hover {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
