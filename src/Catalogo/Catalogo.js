@@ -4,26 +4,26 @@ import './Catalogo.css';
 const products = {
   "Ingeniería térmica": [
     "/1.jpg",
-    "/images/2.jpeg"
+    "/2.jpeg"
   ],
   "Generadores Eléctricos": [
     "/3.jpeg",
-    "4.jpeg"
+    "/4.jpeg"
   ],
   "Bombas": [
-    "/5.JPG",
+    "/5.jpg",
     "/6.jpeg"
   ],
   "Calderas Industriales": [
-    "%PUBLIC_URL%/7.jpeg",
-    "%PUBLIC_URL%/8.JPEG"
+    "/7.jpeg",
+    "/8.jpeg"
   ],
   "Calderas de Edificios": [
     "/2.jpeg",
     "/2.jpeg"
   ],
   "Calderas Domiciliarias": [
-    "images/1.jpeg",
+    "ruta/a/imagen11.jpg",
     "ruta/a/imagen12.jpg"
   ]
 };
@@ -36,7 +36,7 @@ function ProductCatalog() {
           <h2>{category}</h2>
           <div className="product-grid">
             {images.map((image, index) => (
-              <img key={index} src={require(image)}  alt={`Imagen de ${category}`} />
+              <img key={index} src={image} alt={`Imagen de ${category}`} />
             ))}
           </div>
         </div>
