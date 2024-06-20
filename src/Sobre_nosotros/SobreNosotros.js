@@ -13,7 +13,7 @@ const SobreNosotros = () => {
           
         </div>
         <div className="image-content">
-          <img className="ImagenSN" src="/SN.png" alt="Technical Tool" />
+          <img className="ImagenSN" src={require("./SN.png")} alt="Technical Tool" />
         </div>
       </div>
     </div>
