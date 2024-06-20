@@ -8,7 +8,7 @@ const products = {
   ],
   "Generadores Eléctricos": [
     "/3.jpeg",
-    "/4.jpeg"
+    "4.jpeg"
   ],
   "Bombas": [
     "/5.JPG",
