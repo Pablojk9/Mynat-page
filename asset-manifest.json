@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Mynat-page/static/css/main.1456ac65.css",
-    "main.js": "/Mynat-page/static/js/main.892baf7d.js",
+    "main.css": "/Mynat-page/static/css/main.5111e73b.css",
+    "main.js": "/Mynat-page/static/js/main.a38567ce.js",
     "static/media/SN.png": "/Mynat-page/static/media/SN.db4560bb9b7775653b69.png",
+    "static/media/LP1.png": "/Mynat-page/static/media/LP1.9607d1e977b7e34c2012.png",
     "static/media/5.jpg": "/Mynat-page/static/media/5.c83d417dd5d100076a62.jpg",
     "static/media/1.jpg": "/Mynat-page/static/media/1.54343b20610638e9cc1e.jpg",
     "static/media/8.jpeg": "/Mynat-page/static/media/8.2e7d817f4f694fb4eed5.jpeg",
@@ -13,11 +14,11 @@
     "static/media/4.jpeg": "/Mynat-page/static/media/4.8f0ed6b45f672e911c1f.jpeg",
     "static/media/6.jpeg": "/Mynat-page/static/media/6.95a8c471fc6684fb0104.jpeg",
     "index.html": "/Mynat-page/index.html",
-    "main.1456ac65.css.map": "/Mynat-page/static/css/main.1456ac65.css.map",
-    "main.892baf7d.js.map": "/Mynat-page/static/js/main.892baf7d.js.map"
+    "main.5111e73b.css.map": "/Mynat-page/static/css/main.5111e73b.css.map",
+    "main.a38567ce.js.map": "/Mynat-page/static/js/main.a38567ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.1456ac65.css",
-    "static/js/main.892baf7d.js"
+    "static/css/main.5111e73b.css",
+    "static/js/main.a38567ce.js"
   ]
 }
