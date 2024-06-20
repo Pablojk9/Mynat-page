@@ -1,5 +1,6 @@
 
 .hero-and-products {
+  padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +20,17 @@
     margin-bottom: 2rem;
   }
   
+  
+
+  .landingimg{
+    
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
   .hero-content h1 {
     color: #fff;
     font-size: 2rem;
@@ -26,7 +38,6 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
   }
-  
   .product-section {
     display: flex;
     justify-content: center;

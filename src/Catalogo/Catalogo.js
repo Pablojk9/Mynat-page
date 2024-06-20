@@ -4,7 +4,7 @@ import './Catalogo.css';
 const products = {
   "Ingeniería térmica": [
     "/1.jpg",
-    "/images/2.jpeg"
+    "/2.jpeg"
   ],
   "Generadores Eléctricos": [
     "/3.jpeg",
@@ -23,7 +23,7 @@ const products = {
     "/2.jpeg"
   ],
   "Calderas Domiciliarias": [
-    "images/1.jpeg",
+    "ruta/a/imagen11.jpg",
     "ruta/a/imagen12.jpg"
   ]
 };
