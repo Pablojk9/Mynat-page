@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Barra />
         <Routes>
-          <Route path="/" element={<Catalogo />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           {/* Puedes agregar más rutas aquí si es necesario */}

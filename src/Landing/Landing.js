@@ -4,10 +4,10 @@ import './Landing.css';
 
 const Landing = () => {
   const products = [
-    { imgSrc: 'path/to/image1.jpg', price: 'PRECIO' },
-    { imgSrc: 'path/to/image2.jpg', price: 'PRECIO' },
-    { imgSrc: 'path/to/image3.jpg', price: 'PRECIO' },
-    { imgSrc: 'path/to/image4.jpg', price: 'PRECIO' },
+    { imgSrc: '/1.jpg', price: 'PRECIO' },
+    { imgSrc: '/1.jpg', price: 'PRECIO' },
+    { imgSrc: '/1.jpg', price: 'PRECIO' },
+    { imgSrc: '/1.jpg', price: 'PRECIO' },
   ];
 
   return (
