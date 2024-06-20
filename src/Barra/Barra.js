@@ -5,7 +5,7 @@ import './Barra.css';
 function Barra() {
     return (
         <div className="bar">
-            <img className="logo" src={require('./minat.png')} alt="Logo" />
+            <Link to="/"><img className="logo" src={require('./minat.png')} alt="Logo" /></Link>
             <div className="button-container">
                 <Link to="/" className="bar-link">Inicio</Link>
                 <Link to="/catalogo" className="bar-link">Catálogo</Link>

@@ -1,72 +1,78 @@
-
 .hero-and-products {
   padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #f0f0f0;
-    padding: 2rem 0;
-  }
-  
-  .hero {
-    width: 100%;
-    background-image: "\1.jpg";
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 2rem 0;
+}
 
-  .landingimg{
-    
-    width: 50vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  .hero-content h1 {
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-  }
-  .product-section {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    background: #fff;
-    width: 100%;
-    max-width: 1200px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card {
-    background: #f9f9f9;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: calc(25% - 1rem); /* Distribuye 4 productos en una fila */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-  
-  .product-card p {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
+.hero {
+  width: 100%;
 
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Asegura que los elementos posicionados absolutamente estén referenciados */
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  z-index: 10; /* Asegura que el texto esté por encima de otros elementos */
+}
+
+.landingimg {
+  
+  position: relative;
+  width: 50vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 1; /* Añadido para asegurar la superposición */
+}
+
+.product-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #fff;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: calc(25% - 1rem); /* Distribuye 4 productos en una fila */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  font-weight: bold;
+}

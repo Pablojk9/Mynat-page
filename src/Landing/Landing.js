@@ -14,7 +14,7 @@ const Landing = () => {
     <section className="hero-and-products">
       <div className="hero">
         <div className="hero-content">
-          <img className="landingimg" src="/SN.png" alt="Hero" />
+          <img className="landingimg" src={require("./LandingImg/LP1.png")} alt="Hero" />
           <h1>CONSULTA POR TU COTIZACIÓN DE MANERA GRATUITA</h1>
           
           
