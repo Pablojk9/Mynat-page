@@ -1,3 +1,4 @@
+/* Asegura que la barra de navegación tenga una estructura fija */
 .bar {
     background-color: white;
     padding: 10px 20px;
@@ -25,33 +26,50 @@
 }
 
 .button-container {
+    margin-right: 2vw;
     display: flex;
     gap: 0; /* Establece el espacio entre los elementos a 0 */
 }
 
+/* Establece un tamaño fijo para los enlaces */
 .bar-link {
     background-color: white;
     color: black;
     border: none;
-    padding: 8px 16px;
+    padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    margin-left: 0px; /* Elimina cualquier margen izquierdo */
-    margin-right: 5vh;
     text-decoration: none;
+    transition: all 0.3s ease; /* Añade una transición suave */
+    display: inline-block;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+    width: 120px; /* Fija el ancho para todos los enlaces */
+    text-align: center; /* Centra el texto */
+    text-justify: center; /* Justifica el texto horizontalmente */
+  
 }
 
+/* Estilos para el hover que no afectan el layout */
 .bar-link:hover {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    /* background-color: salmon; */
+    transform: scale(1.05); /* Utiliza transform para un efecto de hover sin afectar el layout */
 }
 
+/* Estilos específicos para el enlace de usuario */
 .usuario-link {
-    color: white; /* Cambia el color a rojo */
+    color: white;
     background-color: red;
+    padding: 15px 16px; /* Mantén el padding consistente */
+    display: inline-block;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+    width: 120px; /* Fija el ancho igual que los otros enlaces */
+    text-align: center; /* Centra el texto */
 }
 
 .usuario-link:hover {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    transform: scale(1.05); /* Usa transform en lugar de cambiar el padding */
 }
