@@ -70,9 +70,186 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
+  border-radius: 10%;
 }
 
 .product-card p {
   font-size: 1rem;
   font-weight: bold;
+}
+
+
+/*
+  Cambios realizados por Bastian:
+  - Adaptado el diseño de la sección "Sobre Nosotros" al diseño de la página principal.
+      cambiando el nombre de las clases de .content a .content_1, .text-content a .text-content_1, .image-content a .image-content_1, .ImagenSN a .ImagenSN_1
+
+  - Modificado el ancho máximo del contenedor principal para centrar el contenido.
+  - Alineado el contenido al inicio del contenedor.
+  - Aumentado la separación entre el texto y la imagen.
+  - Modificado el largo del texto para que sea más legible [super necesario].
+  - Incrementado el espacio asignado a la imagen.
+  - Añadido bordes redondeados a la imagen [20 pixeles].
+*/
+
+.container_1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: top;/*Alinea el contenido al inicio del contenedor (antes estaba en center)*/
+  width: 100%;
+  max-width: 1200px;  /*Aumenta el ancho máximo del contenedor para centrar el contenido*/
+  margin: auto;
+  padding-top: 60px;
+}
+
+
+.content_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 101%;
+  padding: 20px;
+  gap: 9em; /* Aumenta la separación entre el texto y la imagen */
+}
+
+.text-content_1 {
+  flex: 100em; /*modifica el largo del texto, gracias a esto se puede ver de manera clara los parrafos*/
+  width: 13em;
+  max-width: 100%; /*  (antes 35) content _1 y container_1 deven ser modificados para que tome efecto*/
+}
+
+.text-content_1 h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text-content_1 h2 {
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+
+.text-content_1 p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;  
+}
+
+.image-content_1 {
+  flex: 2; /* Incrementa el espacio asignado a la imagen */
+  min-width: 8px; /* Asegura que la imagen tenga un ancho mínimo de 800 píxeles */
+  max-width: 600%; /* Limita el ancho máximo de la imagen para mantener la estructura */
+  text-align: right; /* Centra la imagen horizontalmente */
+}
+
+.ImagenSN_1 {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-radius: 20px; /* [nuevo] Añade bordes redondeados a la imagen */
+}
+
+.ImagenSN_1:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+
+/*Codigo de la parte del mensaje
+  - Se ha modificado el ancho del contenedor principal para centrar el contenido.
+  - Se ha añadido un espacio entre los elementos del formulario.
+  - Se ha ajustado el ancho de los campos de texto y el botón de envío.
+  - Se ha añadido un borde alrededor de los campos de texto y el área de texto.
+  - Se ha añadido un borde redondeado a los campos de texto y el área de texto.
+  
+  - Lo importante en resumen:
+            El formulario divide el espacio en dos columnas, una para el formulario y otra para la imagen.
+*/
+
+
+.contact_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+  flex: 1;
+  padding-right: 20px; /* Asegura un espacio entre los elementos */
+}
+
+.image-conten_2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImagenSN_2 {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px; /* Opcional: para darle bordes redondeados a la imagen */
+}
+
+.colocar_nombre, .colocar_email, .colocar_telefono, .colocar_mensaje {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.texto_mensaje {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 150px; /* Ajusta esto según necesites */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.aviso {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.obligatorio {
+  color: red;
 }
