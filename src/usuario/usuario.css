@@ -1,0 +1,62 @@
+/* Estilo general de la sección */
+.usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0 auto; /* Add this line to center horizontally */
+}
+
+/* Contenedor principal */
+.usuario-container {
+    width: 100%;
+    max-width: 30em;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Título del formulario */
+  .usuario-titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor del formulario */
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo del formulario */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo de cada campo del formulario */
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  /* Etiqueta de cada campo */
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  /* Input del formulario */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
