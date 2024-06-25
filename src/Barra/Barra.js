@@ -10,7 +10,7 @@ function Barra() {
                 <Link to="/" className="bar-link">Inicio</Link>
                 <Link to="/catalogo" className="bar-link">Catálogo</Link>
                 <Link to="/sobre-nosotros" className="bar-link">Sobre Nosotros</Link>
-                <Link to="/contacto" className="bar-link">Contacto</Link>
+                <Link to="/PerfilUsuario" className="bar-link">Perfil</Link>
                 <Link to="/usuario" className="bar-link usuario-link">Usuario</Link> {/* Añadir la clase 'usuario-link' */}
             </div>
         </div>
