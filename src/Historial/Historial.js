@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Historial.css';
 
 const Historial = () => {
@@ -13,6 +14,7 @@ const Historial = () => {
     ];
 
     const [selectedItem, setSelectedItem] = useState(null);
+    const navigate = useNavigate();
 
     const toggleMenu = (id) => {
         if (selectedItem === id) {
@@ -22,8 +24,20 @@ const Historial = () => {
         }
     };
 
+    const goToAgenda = () => {
+        navigate('/Agenda');
+    };
+
+    const goToHistorial = () => {
+        navigate('/Historial');
+    };
+
     return (
         <section className="historial">
+            <div className="view-icons-lateral">
+                <div className="icon" onClick={goToAgenda}>📅 Agenda</div>
+                <div className="icon" onClick={goToHistorial}>📊 Historial</div>
+            </div>
             <div className="historial-container">
                 <h1 className="historial-titulo">Historial</h1>
                 <div className="search-filter-container">
@@ -31,7 +45,7 @@ const Historial = () => {
                     <button className="filter-button">Filtro</button>
                 </div>
                 <table className="historial-table">
-                    <thead>
+                    <thead >
                         <tr>
                             <th>N° Trabajo</th>
                             <th>Técnico</th>
@@ -42,7 +56,7 @@ const Historial = () => {
                     <tbody>
                         {data.map(item => (
                             <React.Fragment key={item.id}>
-                                <tr className="menu" onClick={() => toggleMenu(item.id)}>
+                                <tr className="menu-desplegable" onClick={() => toggleMenu(item.id)}>
                                     <td>{item.id}</td>
                                     <td>{item.tecnico}</td>
                                     <td>
@@ -67,11 +81,6 @@ const Historial = () => {
                         ))}
                     </tbody>
                 </table>
-                <div className="view-icons">
-                    <div className="icon">🔍</div>
-                    <div className="icon">📅</div>
-                    <div className="icon">📊</div>
-                </div>
             </div>
         </section>
     );

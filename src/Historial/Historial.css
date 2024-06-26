@@ -2,7 +2,7 @@
 .historial {
     margin-top: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     min-height: 100vh;
@@ -19,6 +19,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 80px; /* Ajusta el margen para dejar espacio para los íconos */
 }
 
 /* Título del historial */
@@ -93,14 +94,24 @@
     color: white;
 }
 
-/* Iconos de vista */
-.view-icons {
+/* Iconos de vista en el lateral */
+.view-icons-lateral {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.view-icons .icon {
+.menu-desplegable:hover{
+    cursor: pointer;
+    background-color: antiquewhite  ;
+}
+
+.view-icons-lateral .icon {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -108,17 +119,13 @@
     cursor: pointer;
 }
 
-.view-icons .icon:hover {
+.view-icons-lateral .icon:hover {
     background-color: #f0f0f0;
 }
 
 /* Menú desplegable */
 .dropdown-row {
     background-color: #f9f9f9;
-}
-.menu:hover{
-    cursor: pointer;
-    background-color: antiquewhite;
 }
 
 .dropdown-menu {
@@ -128,4 +135,3 @@
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
- 

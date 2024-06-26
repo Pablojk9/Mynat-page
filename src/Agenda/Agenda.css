@@ -1,0 +1,73 @@
+/* Estilo general de la sección */
+.agenda {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Barra lateral */
+.view-icons-lateral {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 60px;
+    height: auto;
+}
+
+.view-icons-lateral .icon {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.view-icons-lateral .icon:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contenedor principal */
+.agenda-container {
+    width: 100%;
+    max-width: 60em;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 100px; /* Ajusta el margen para dejar espacio para los íconos */
+}
+
+/* Título de la agenda */
+.agenda-titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tabla de agenda */
+.agenda-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.agenda-table th,
+.agenda-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.agenda-table th {
+    background-color: #f9f9f9;
+}

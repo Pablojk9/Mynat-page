@@ -36,7 +36,7 @@ function ProductCatalog() {
           <h2>{category}</h2>
           <div className="product-grid">
             {images.map((image, index) => (
-              <img key={index} src={require(`${image}`)} alt={`Imagen de ${category}`} />
+              <img className="ImagenCatalogo" key={index} src={require(`${image}`)} alt={`Imagen de ${category}`} />
             ))}
           </div>
         </div>
