@@ -7,6 +7,7 @@ import Barra from './Barra/Barra.js';
 import Landing from './Landing/Landing.js';
 import Usuario from './usuario/usuario.js'; 
 import PerfilUsuario from './Perfil_Usuario/PerfilUsuario.js';
+import Historial from './Historial/Historial.js';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           
           <Route path="/" element={<Landing />} />
           <Route path="/catalogo" element={<Catalogo />} />
-
+          <Route path="/Historial" element={<Historial />} />
           <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
           <Route path="/usuario" element={<Usuario />} /> {/* Nueva ruta para Usuario , ultra necesario que este en mayuscula*/}
           {/* Redirección predeterminada a la página de aterrizaje */}
