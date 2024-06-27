@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="footer-social">
                 <a href="https://www.facebook.com" className="social-icon">📘</a>
                 <a href="https://www.linkedin.com" className="social-icon">🔗</a>
-                <a href="https://www.youtube.com" className="social-icon">▶️</a>
+                <a href="https://www.youtube.com" className="social-icon"><img src={require("./facebook.png")} className="social-icon"></img></a>
                 <a href="https://www.instagram.com" className="social-icon">📸</a>
             </div>
         </footer>
