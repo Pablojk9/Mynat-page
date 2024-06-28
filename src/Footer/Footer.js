@@ -9,19 +9,25 @@ const Footer = () => {
             </div>
             <div className="footer-topics">
                 <div className="topic">
-                    <h4>Topic</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="/page1">Contacto:+123456789</a></li>
-                        <li><a href="/page2">Page</a></li>
-                        <li><a href="/page3">Page</a></li>
+                        <li>+569 3436 6313</li>
+                        <li> mvargas@mynatchile.cl</li>
+                        
                     </ul>
                 </div>
             </div>
             <div className="footer-social">
-                <a href="https://www.facebook.com" className="social-icon">📘</a>
-                <a href="https://www.linkedin.com" className="social-icon">🔗</a>
-                <a href="https://www.youtube.com" className="social-icon"><img src={require("./facebook.png")} className="social-icon"></img></a>
-                <a href="https://www.instagram.com" className="social-icon"><img src={require("./instagram.png")} className="social-icon"></img></a>
+                {/* 
+                AGREGAR ENLACES REALES
+                    Agregar enlaces a redes sociales de MYNAT Chile SPA:
+                        - Facebook
+                        - YouTube
+                */}
+                <a href="https://www.facebook.com" className="social-icon"><img src={require("./facebook.png")} className="social-icon"></img></a>
+                <a href="https://cl.linkedin.com/in/mynat-chile-spa-4b6575215" className="social-icon"><img src={require("./linkedin.png")} className="social-icon"></img></a>
+                <a href="https://www.youtube.com" className="social-icon"><img src={require("./youtube.png")} className="social-icon"></img></a>
+                <a href="https://www.instagram.com/mynat_chile_spa/?hl=es-la" className="social-icon"><img src={require("./instagram.png")} className="social-icon"></img></a>
             </div>
         </footer>
     );
