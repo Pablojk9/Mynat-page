@@ -45,7 +45,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-left: 100px; /* Ajusta el margen para dejar espacio para los íconos */
+    margin-left: 20VW; /* Ajusta el margen para dejar espacio para los íconos */
 }
 
 /* Título de la agenda */
