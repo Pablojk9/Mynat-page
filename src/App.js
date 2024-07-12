@@ -9,6 +9,7 @@ import PerfilUsuario from './Perfil_Usuario/PerfilUsuario.js';
 import Historial from './Historial/Historial.js';
 import Agenda from './Agenda/Agenda.js'; // Importa el componente Agenda
 import Footer from './Footer/Footer.js'
+import CrearUsuario from './Crear_Usuario/Crear_Usuario.js';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/historial" element={<Historial />} />
           <Route path="/perfilusuario" element={<PerfilUsuario />} />
-          <Route path="/usuario" element={<Usuario />} />
+          <Route path="/crearUsuario" element={<CrearUsuario />} />
           <Route path="/Agenda" element={<Agenda />} /> {/* Agrega la ruta para Agenda */}
           {/* Redirección predeterminada a la página de aterrizaje */}
           <Route path="*" element={<Navigate to="/" />} />

@@ -1,0 +1,64 @@
+/* Estilos para la caja y los elementos del formulario */
+.box {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+
+.input {
+  font-size: 1.25rem;
+}
+
+.input.is-medium {
+  height: 3rem;
+}
+
+.icon {
+  color: #888;
+}
+
+/* Estilos para el botón */
+.button {
+  font-size: 1.25rem;
+}
+
+.button.is-large {
+  padding: 1rem 1.5rem;
+}
+
+/* Estilos para la sección centrada */
+.hero-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 480px;
+}
+
+.column {
+  margin-top: 1rem;
+}
+
+.has-text-centered {
+  text-align: center;
+}
+
+.has-text-grey {
+  color: #7a7a7a;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Estilos adicionales para responsividad */
+@media (max-width: 768px) {
+  .hero-body {
+    padding: 1rem;
+  }
+}
