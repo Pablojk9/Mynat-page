@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambiar roles - Mynat</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="https://unpkg.com/html-input-rut"></script>
+    <script src="../loadNav.js" defer></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <img src="/img/logo_mynat.svg" style="width: auto; max-height: 80px;" />
+                    <p class="subtitle is-4">Cambiar roles</p>
+                    <form id="updateRolForm">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" is="input-rut" type="text" id="Rut" placeholder="Rut" maxlength="12" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-address-card"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">Nuevo Rol</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select id="es_admin" name="es_admin">
+                                        <option value="0">Técnico</option>
+                                        <option value="1">Administrador</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button is-block is-success is-large is-fullwidth">Actualizar Rol</button><br />
+                    </form>
+                    <script>
+                        document.getElementById('updateRolForm').addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const Rut = document.getElementById('Rut').value;
+                        const es_admin = document.getElementById('es_admin').value;
+                        try {
+                            const response = await fetch(`http://localhost:3000/api/tecs/${Rut}/admin-status`, {
+                                method: 'PUT',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ es_admin: es_admin })
+                            });
+                            if (!response.ok) {
+                                const errorText = await response.text();
+                                throw new Error(errorText);
+                            }
+                                alert('Rol actualizado exitosamente');
+                            } catch (error) {
+                                alert('Error al actualizar el rol: ' + error.message);
+                            }
+                        });
+                    </script>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

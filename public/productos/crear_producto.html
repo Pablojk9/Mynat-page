@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear producto - Mynat</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-toast@3.0.0/dist/bulma-toast.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="../loadNav.js" defer></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <img src="/img/logo_mynat.svg" style="width: auto; max-height: 80px;" />
+                    <p class="subtitle is-4">Crear producto</p>
+                    <br />
+                    <form id="createProductForm">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" id="NombreProducto" placeholder="Nombre del producto" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-box"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" id="DescripcionProducto" placeholder="Descripción del producto" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" type="number" id="PrecioOriginal" placeholder="Precio original" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" type="number" id="Oferta" placeholder="Oferta (%)" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-percentage"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" type="number" id="PrecioFinal" placeholder="Precio final" readonly />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-tag"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <button type="submit" class="button is-block is-danger is-large is-fullwidth">Crear Producto</button><br />
+                    </form>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', (event) => {
+                        function calcularPrecioFinal() {
+                            const precioOriginal = document.getElementById('PrecioOriginal').value;
+                            const oferta = document.getElementById('Oferta').value;
+                            const precioFinalInput = document.getElementById('PrecioFinal');
+                            const precioFinal = precioOriginal * (1 - oferta / 100);
+                            precioFinalInput.value = precioFinal.toFixed(2);
+                        }
+                        calcularPrecioFinal();
+                        document.getElementById('Oferta').addEventListener('input', calcularPrecioFinal);
+                        document.getElementById('createProductForm').addEventListener('submit', async function(e) {
+                            e.preventDefault();
+                            const nombreProducto = document.getElementById('NombreProducto').value;
+                            const descripcionProducto = document.getElementById('DescripcionProducto').value;
+                            const precioOriginal = document.getElementById('PrecioOriginal').value;
+                            const oferta = document.getElementById('Oferta').value;
+                            const precioFinal = precioOriginal * (1 - oferta / 100);
+                            try {
+                                const response = await fetch('http://localhost:3000/api/productos', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({ nombre_producto: nombreProducto, descripcion_producto: descripcionProducto, precio_original_producto: precioOriginal, oferta_producto: oferta, precio_oferta_producto: precioFinal })
+                                });
+                                if (!response.ok) {
+                                    const errorText = await response.text();
+                                    throw new Error(errorText);
+                                }
+                                alert('Producto creado exitosamente');
+                                } catch (error) {
+                                    alert('Error al crear el producto: ' + error.message);
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

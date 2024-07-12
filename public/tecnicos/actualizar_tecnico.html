@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualizar técnico - Mynat</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="module" src="https://unpkg.com/html-input-rut"></script>
+  <script src="../loadNav.js" defer></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <div class="box">
+          <img src="/img/logo_mynat.svg" style="width: auto; max-height: 80px;" />
+          <p class="subtitle is-4">Actualizar técnico</p>
+          <br />
+          <form id="updateTecForm">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium" is="input-rut" type="text" id="Rut" placeholder="Rut" required />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-address-card"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium" id="Nombre" placeholder="Nombre" required />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user-alt"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium" id="Apellidos" placeholder="Apellidos" />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user-alt"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                  <span class="icon is-small is-left">
+                      <i class="fas fa-phone-alt"></i>
+                  </span>
+                  <input class="input is-medium" type="tel" id="Telefono" placeholder="+56" value="+56" oninput="limitarTelefono(this)" />
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-medium" type="email" id="Correo" placeholder="Correo" required />
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+            <button type="submit" class="button is-block is-warning is-large is-fullwidth">Actualizar</button><br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function limitarTelefono(input) {
+        const maxLength = 12;
+        const valorInicial = "+56";
+        let valor = input.value.trim();
+        if (!valor.startsWith(valorInicial)) {
+            valor = valorInicial;
+        }
+        if (valor.length > maxLength) {
+            valor = valor.slice(0, maxLength);
+        }
+        input.value = valor;
+    }
+  </script>
+  <script>
+    document.getElementById('updateTecForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const rut = document.getElementById('Rut').value;
+      const nombre = document.getElementById('Nombre').value;
+      const apellidos = document.getElementById('Apellidos').value;
+      const telefono = document.getElementById('Telefono').value.replace(/\D/g, '');
+      const correo = document.getElementById('Correo').value;
+      try {
+        const response = await fetch(`http://localhost:3000/api/tecs/${rut}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ nombre, apellidos, telefono, correo })
+        });
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(errorText);
+        }
+        alert('Tecnico actualizado exitosamente');
+      } catch (error) {
+        alert('Error al actualizar el tecnico: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>

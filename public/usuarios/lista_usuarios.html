@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ver usuarios - Mynat</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="../loadNav.js" defer></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-5 is-offset-4">
+                <div class="box">
+                    <img src="/img/logo_mynat.svg" style="width: auto; max-height: 80px;" alt="Mynat Logo" />
+                    <p class="subtitle is-4">Lista de usuarios</p>
+                    <div id="userList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function fetchUsers() {
+            try {
+                const response = await fetch('http://localhost:3000/api/users');
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText);
+                }
+                const users = await response.json();
+                const userListDiv = document.getElementById('userList');
+                userListDiv.innerHTML = '<ul>' + users.map(user => `<li>${user.rut_user} (${user.nombre_user} ${user.apellidos_user}, ${user.correo_user}, +${user.telefono_user})</li>`).join('') + '</ul>';
+            } catch (error) {
+                alert('Error al obtener los usuarios: ' + error.message);
+            }
+        }
+        fetchUsers();
+    </script>
+</body>
+</html>
