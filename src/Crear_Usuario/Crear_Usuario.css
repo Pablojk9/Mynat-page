@@ -38,7 +38,18 @@
 .container {
   max-width: 480px;
 }
-
+.botonCrearUser {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+.botonCrearUser:hover {
+  background-color: salmon;
+}
 .column {
   margin-top: 1rem;
 }

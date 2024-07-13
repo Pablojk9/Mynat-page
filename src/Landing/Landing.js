@@ -75,18 +75,18 @@ const Landing = () => {
 				<label htmlFor="nombre" className="colocar_nombre">Nombre
 					<span className="obligatorio">*</span>
 				</label>
-				<input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre" />
+				<input className='inputLanding' type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre" />
 			</p>
 			<p>
 				<label htmlFor="email" className="colocar_email">Email
 					<span className="obligatorio">*</span>
 				</label>
-				<input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email" />
+				<input className='inputLanding' type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email" />
 			</p>
 			<p>
 				<label htmlFor="telefone" className="colocar_telefono">Teléfono
 				</label>
-				<input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono" />
+				<input className='inputLanding' type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono" />
 			</p>		
 			
 
@@ -96,7 +96,7 @@ const Landing = () => {
 				</label>                     
 				<textarea name="introducir_mensaje" className="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
 			</p>	  								
-			<button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+			<button className="botonLanding" type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
 			<p className="aviso">
 				<span className="obligatorio"> * </span>los campos son obligatorios.
 			</p>					

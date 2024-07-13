@@ -219,10 +219,7 @@
   height: 150px; /* Ajusta esto según necesites */
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+.inputLanding {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -230,7 +227,7 @@ textarea {
   border-radius: 4px;
 }
 
-button[type="submit"] {
+.botonLanding{
   background-color: red;
   color: white;
   padding: 10px 20px;
@@ -240,7 +237,7 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.botonLanding:hover {
   background-color: rgb(247, 181, 181);
 }
 

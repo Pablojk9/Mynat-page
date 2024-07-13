@@ -157,7 +157,7 @@ const CreateUser = () => {
                   </span>
                 </p>
               </div>
-              <button type="submit" className="button is-block is-info is-large is-fullwidth">Crear usuario</button><br />
+              <button type="submit" className="botonCrearUser">Crear usuario</button><br />
             </form>
           </div>
           <p className="has-text-grey">

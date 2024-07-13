@@ -20,6 +20,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/historial" element={<Historial />} />
+          <Route path="/Usuario" element={<Usuario/>} />
           <Route path="/perfilusuario" element={<PerfilUsuario />} />
           <Route path="/crearUsuario" element={<CrearUsuario />} />
           <Route path="/Agenda" element={<Agenda />} /> {/* Agrega la ruta para Agenda */}

@@ -11,7 +11,7 @@ function Barra() {
                 <Link to="/catalogo" className="bar-link">Catálogo</Link>
                 <Link to="/Historial" className="bar-link">Historial</Link>
                 <Link to="/PerfilUsuario" className="bar-link">Perfil</Link>
-                <Link to="/crearUsuario" className="bar-link usuario-link">Usuario</Link> {/* Añadir la clase 'usuario-link' */}
+                <Link to="/Usuario" className="bar-link usuario-link">Usuario</Link> {/* Añadir la clase 'usuario-link' */}
             </div>
         </div>
     );
